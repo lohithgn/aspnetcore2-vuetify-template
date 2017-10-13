@@ -1,0 +1,53 @@
+<template>
+    <div>
+        <h4>Weather forecast</h4>
+
+        <p>This component demonstrates fetching data from the server.</p>
+
+        <v-data-table v-if="forecasts.length" 
+                      v-bind:items="forecasts" 
+                      v-bind:headers="headers"
+                      hide-actions class="elevation-1">
+            <template slot="items" scope="props">
+                <tr>
+                    <td>{{ props.item.dateFormatted }}</td>
+                    <td class="text-xs-right">{{ props.item.temperatureC }}</td>
+                    <td class="text-xs-right">{{ props.item.temperatureF }}</td>
+                    <td>{{ props.item.summary }}</td>
+                </tr>
+                <!-- <td>{{ props.item.name }}</td>
+                <td class="text-xs-right">{{ props.item.calories }}</td>
+                <td class="text-xs-right">{{ props.item.fat }}</td>
+                <td class="text-xs-right">{{ props.item.carbs }}</td>
+                <td class="text-xs-right">{{ props.item.protein }}</td>
+                <td class="text-xs-right">{{ props.item.sodium }}</td>
+                <td class="text-xs-right">{{ props.item.calcium }}</td>
+                <td class="text-xs-right">{{ props.item.iron }}</td> -->
+            </template>
+        </v-data-table>
+        <!-- <table v-if="forecasts.length" class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Temp. (C)</th>
+                    <th>Temp. (F)</th>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in forecasts">
+                    <td>{{ item.dateFormatted }}</td>
+                    <td>{{ item.temperatureC }}</td>
+                    <td>{{ item.temperatureF }}</td>
+                    <td>{{ item.summary }}</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+        <p v-else>
+            <em>Loading...</em>
+        </p>
+    </div>
+</template>
+
+<script src="./fetchdata.ts"></script>

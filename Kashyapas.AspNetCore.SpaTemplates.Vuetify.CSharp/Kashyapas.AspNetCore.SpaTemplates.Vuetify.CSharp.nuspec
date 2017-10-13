@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Kashyapas.AspNetCore.SpaTemplates</id>
+    <version>1.0</version>
+    <authors>Kashyapa</authors>
+    <description>Single Page Application templates for ASP.NET Core</description>
+    <iconUrl>http://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <language>en-US</language>
+    <projectUrl>https://github.com/aspnet/javascriptservices</projectUrl>
+    <licenseUrl>https://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</licenseUrl>
+    <copyright>Copyright © Kashyapas Inc.</copyright>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>aspnet templates spa</tags>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file 
+      src="content/**/*"
+      exclude="**/node_modules/**;**/bin/**;**/obj/**;**/.vs/**;**/.vscode/**;**/ClientApp/dist/**;**/wwwroot/dist/**"
+      target="Content" />
+  </files>
+</package>

@@ -1,0 +1,73 @@
+<template>
+    <v-app id="inspire">
+        <v-navigation-drawer clipped persistent v-model="drawer" enable-resize-watcher app>
+            <v-list dense ripple class="pt-0">
+                <v-list-tile key="home" to="/">
+                    <v-list-tile-action>
+                        <v-icon>home</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title>Home</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile key="counter" to="/counter">
+                    <v-list-tile-action>
+                        <v-icon>home</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title>Counter</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile key="fetchdata" to="/fetchdata">
+                        <v-list-tile-action>
+                            <v-icon>home</v-icon>
+                        </v-list-tile-action>
+                        <v-list-tile-content>
+                            <v-list-tile-title>Fetchdata</v-list-tile-title>
+                        </v-list-tile-content>
+                    </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
+        <v-toolbar app fixed clipped-left class="indigo darken-4" dark>
+            <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-title light>Vue Application</v-toolbar-title>
+        </v-toolbar>
+        <main>
+            <v-container>
+                <router-view></router-view>
+            </v-container>
+        </main>
+        <v-footer app fixed>
+            <span>&copy; 2017</span>
+        </v-footer>
+    </v-app>
+    <!-- <div id='app-root' class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <menu-component />
+            </div>
+            <div class="col-sm-9">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div> -->
+    <!-- <v-app id="example-3" toolbar>
+        <menu-component />
+        <v-toolbar class="indigo darken-4" dark>
+          <v-toolbar-title>vueapp1</v-toolbar-title>
+        </v-toolbar>
+        <main>
+          <v-container fluid>
+                <router-view></router-view>
+          </v-container>
+        </main>
+      </v-app> -->
+</template>
+
+<script src="./app.ts"></script>
+<style>
+    .router-link-exact-active
+    {
+        background-color:lightgray;
+    }
+</style>
