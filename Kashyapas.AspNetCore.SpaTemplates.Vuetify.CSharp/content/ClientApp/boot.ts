@@ -1,6 +1,6 @@
 //import './css/site.css';
 //import 'bootstrap';
-//import '../node_modules/vuetify/dist/vuetify.min.css';
+//import 'vuetify/dist/vuetify.min.css';
 
 import Vue from 'vue';
 import VueRouter from 'vue-router';

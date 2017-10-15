@@ -11,8 +11,9 @@ export default class AppComponent extends Vue {
     items:any[] = [];
     mounted(){
         this.items =  [
-            { title: 'Home', icon: 'dashboard' },
-            { title: 'About', icon: 'question_answer' }
+            { title: 'Home', icon: 'home', path : '/' },
+            { title: 'Counter', icon: 'school',path : '/counter' },
+            { title: 'Fetch data', icon: 'view_list',path : '/fetchdata' }
         ]
     }
     onMenuItemClick(){
