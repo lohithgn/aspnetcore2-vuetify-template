@@ -1,0 +1,6 @@
+
+# Ignore solution files per apparent template conventions
+
+*.suo
+*.sln
+.vs
