@@ -21,8 +21,12 @@
     "vue-property-decorator": "^5.0.1",
     "vue-router": "^2.3.0",
     "vue-template-compiler": "^2.2.2",
-    "vuetify":  "^0.16.6",
+    "vuetify": "^0.16.6",
     "webpack": "^2.2.0",
     "webpack-hot-middleware": "^2.12.2"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "whatwg-fetch": "^2.0.3"
   }
 }

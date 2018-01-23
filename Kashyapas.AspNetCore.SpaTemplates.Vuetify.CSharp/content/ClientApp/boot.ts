@@ -1,3 +1,5 @@
+import 'whatwg-fetch';
+
 //import './css/site.css';
 //import 'bootstrap';
 //import 'vuetify/dist/vuetify.min.css';
@@ -10,13 +12,13 @@ Vue.use(VueRouter);
 Vue.use(Vuetify);
 
 const routes = [
-    { path: '/', component: require('./components/home/home.vue.html') },
-    { path: '/counter', component: require('./components/counter/counter.vue.html') },
-    { path: '/fetchdata', component: require('./components/fetchdata/fetchdata.vue.html') }
+    { path: '/', component: require('./components/home/home.vue') },
+    { path: '/counter', component: require('./components/counter/counter.vue') },
+    { path: '/fetchdata', component: require('./components/fetchdata/fetchdata.vue') }
 ];
 
 new Vue({
     el: '#app-root',
     router: new VueRouter({ mode: 'history', routes: routes }),
-    render: h => h(require('./components/app/app.vue.html'))
+    render: h => h(require('./components/app/app.vue'))
 });
